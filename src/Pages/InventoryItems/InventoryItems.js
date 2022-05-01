@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import InventoryItem from '../InventoryItem/InventoryItem';
 
 const InventoryItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('items.json')
+        fetch('http://localhost:5000/inventory')
             .then(res => res.json())
             .then(data => setItems(data.slice(0,6)))
     }, [])
@@ -20,6 +21,7 @@ const InventoryItems = () => {
 
                         ></InventoryItem>)
                     }
+                    <Link  to='/manageInventories'>ManageInventories</Link>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 const Banner = () => {
     return (
+       
         <div>
             <Carousel>
                 <Carousel.Item interval={2000}>
@@ -19,7 +20,7 @@ const Banner = () => {
                 <Carousel.Item interval={500}>
                     <img
                         className="d-block w-100"
-                        src="https://i.ibb.co/S3jyLvj/banner1.png"
+                        src="https://i.ibb.co/RhXG1c1/banner2.png"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -30,7 +31,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.ibb.co/S3jyLvj/banner1.png"
+                        src="https://i.ibb.co/C8nT4WN/banner3.png"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
@@ -38,7 +39,7 @@ const Banner = () => {
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <p></p>
+                
             </Carousel>
         </div>
     );

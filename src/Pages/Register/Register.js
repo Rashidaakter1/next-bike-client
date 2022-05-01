@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
 import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -10,6 +10,8 @@ import Loading from '../../Shared/Loading/Loading';
 const Register = () => {
 
   const [user, loading, error] = useAuthState(auth);
+
+  const navigate = useNavigate()
 
   // email password based authentication
   const [
@@ -32,10 +34,7 @@ const Register = () => {
     return <Loading></Loading>
   }
   if (user) {
-    <div>
-      <p>Registered User: {user.email} </p>
-
-    </div>
+    navigate('/')
   }
 
 
@@ -66,15 +65,15 @@ const Register = () => {
           <Form onSubmit={handleRegister} >
             <Form.Group className="mb-3 text-white fs-3 fw-bolder" controlId="formBasicEmail">
               <Form.Label>Full Name</Form.Label>
-              <Form.Control name='name' className='w-100 mb-3' type="name" placeholder="Full Name" />
+              <Form.Control name='name' className='w-100 mb-3 fs-3 fw-bolder' type="name" placeholder="Full Name" />
               <Form.Label>Email address</Form.Label>
-              <Form.Control name='email' className='w-100 mb-3' type="email" placeholder="Email Address" />
+              <Form.Control name='email' className='w-100 mb-3 fs-3 ' type="email" placeholder="Email Address" />
 
             </Form.Group>
 
             <Form.Group className="mb-3 text-white fs-3 fw-bolder" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control name='password' className='w-100 mb-3' type="password" placeholder="Password" />
+              <Form.Control name='password' className='w-100 mb-3 fs-3 fw-bolder' type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="I agree to the terms of service" />
