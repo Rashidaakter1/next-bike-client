@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import useItems from '../../Hooks/useItems';
 
 const MyItems = () => {
     const [user, loading, error] = useAuthState(auth);
-    const [items,setItems]=useItems()
+    const [items,setItems]=useState({})
+    useEffect(()=>{
+        fetch(`http://localhost:5000/inventory?email=$`)
+    },[])
+
 //    if(user.email === items.email){
 //        items.filter(item=> item._id === )
 //    }

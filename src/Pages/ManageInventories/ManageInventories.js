@@ -1,28 +1,37 @@
 
+import { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import CustomLink from '../../Hooks/CustomHooks'
-import useItems from '../../Hooks/useItems';
+
+
 
 
 
 const ManageInventories = () => {
-    const [items, setItems] = useItems()
-    console.log(items);
+   
+    const [dataTable, setDataTable] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/inventory')
+            .then(res => res.json())
+            .then(data => setDataTable(data))
+    }, [])
+   
 
+    
     const handleDelete = (id) => {
         const url = `http://localhost:5000/inventory/${id}`
         fetch(url, {
             method: 'DELETE',
         })
-       .then(res=>res.json())
-       .then(data=>{
-          
-           const agree =window.confirm('Are you want to delete this item?')
-           if(agree){
-            const remaining = items.filter(item=>item._id !== id)
-            setItems(remaining)
-           }
-       })
+            .then(res => res.json())
+            .then(data => {
+
+                const agree = window.confirm('Are you want to delete this item?')
+                if (agree) {
+                    const remaining =dataTable.filter(item => item._id !== id)
+                    setDataTable(remaining)
+                }
+            })
 
 
     }
@@ -30,14 +39,40 @@ const ManageInventories = () => {
     return (
         <div style={{ "minHeight": "100vh" }}>
             <h1>Manage Inventories</h1>
-            {
-                items.map(item => <div key={item._id} >
-                    <h1> item : {item._id} {item.name} <button onClick={() => handleDelete(item._id)}>X</button> </h1>
-                </div>)
+
+            <h1>dynamic table</h1>
+
+            <Table striped bordered hover variant="">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                {
+                    dataTable.map(data =>
+                        <tbody>
+                            <tr>
+                                <td>{data.number}</td>
+                                <td>{data._id}</td>
+                                <td>{data.name}</td>
+                                <td>{data.price}</td>
+                                <td>{data.quantity}</td>
+                                <td><button>Add</button>
+                                    <button onClick={() => handleDelete(data._id)}>Delete</button>
+                                </td>
 
 
-            }
-            <button><CustomLink to='/addNewItem' >Add New Item</CustomLink></button>
+                            </tr>
+                        </tbody>
+                    )
+                }
+            </Table>
+            
+            <button><Link to='/addNewItem' >Add New Item</Link></button>
         </div>
     );
 };

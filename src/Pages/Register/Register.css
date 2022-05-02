@@ -2,21 +2,41 @@
 
 .form-container{
    
-    min-height: 100vh;
-    width: 75%;
-    margin: auto;
-    padding: 30px;
-   
-    background-image:url(https://i.ibb.co/R7xg1r0/form-1.png) ;
+    
+    width: 100%;
+    border-bottom: 10px solid purple;
+    background-image:url(https://i.ibb.co/SXNXgxv/banner4-1.png) ;
     background-repeat: no-repeat;
 }
+.form-heading{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+.form-heading h1{
+    color: rgb(85, 128, 0);
+    font-size:50px;
+    font-weight: 400;
+}
+.form-heading p{
+    color: rgb(85, 128, 0);
+    font-size:24px;
+    font-weight: 400;
+}
+
+
 .form{
+ 
+    border-radius: 30px;
+    width: 50%;
+    margin: auto;
+    padding:30px 60px;
     display: flex;
     justify-content: center;
+    background-color: rgb(230, 178, 178);
 }
 .form label{
-    color: rgb(214, 38, 38);
+    color:  rgb(92, 12, 79);
 }
-.form label:hover{
-    color: rgb(214, 174, 99);
-}
+
+

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 const AddNewItem = () => {
+    const navigate = useNavigate()
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
@@ -15,6 +16,8 @@ const AddNewItem = () => {
         })
             .then((response) => response.json())
             .then(result=>console.log(result));
+
+            navigate('/manageInventories')
 
          
     };
@@ -31,7 +34,7 @@ const AddNewItem = () => {
 
                 <input className='mb-3 w-50 mx-auto ' type="submit" value='Add stock' />
             </form>
-            <Outlet></Outlet>
+          
         </div>
     );
 };

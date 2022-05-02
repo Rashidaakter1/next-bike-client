@@ -1,35 +1,69 @@
+
 import React, { useEffect, useState } from 'react';
+import { Button, Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Inventory = () => {
-    const {id}=useParams()
-    // console.log(id)
-    const [item, setItem] = useState([]);
+    const { id } = useParams()
+
+    const [item, setItem] = useState({});
     useEffect(() => {
-        // http://localhost:5000/inventory/626bc564de62a7fcf9d7d7b3
+        
         fetch(`http://localhost:5000/inventory/${id}`)
             .then(res => res.json())
-            .then(data => setItem(data))
+            .then(data => {
+                setItem(data)
+                console.log(data);
+            })
+
+        fetch(`http://localhost:5000/inventory/${id}`, {
+                method: 'PUT',
+                body: JSON.stringify(item),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((response) => response.json())
+                .then((json) =>console.log(json));
+          
     }, [])
 
-    // console.log(items)
-    
-    
+   
+
+  
+
+
     return (
-        <div style={{"minHeight":"100vh"}}>
+        <div style={{ "minHeight": "100vh" }}>
 
-            <h1>{item._id} : {item.name}</h1>
+            <h1>{item._id} : </h1>
 
-           {/* {
-               items.map(item=><div key={item._id}>
-                   <h1>item id : {item._id}</h1>
-                   <h2>{item.name}</h2>
-               </div>)
-           } */}
-            
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={item.img} />
+                <Card.Body>
+                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Text>
+                        ID : {item._id}
+                    </Card.Text>
+                    <Card.Text>
+                        {item.description}
+                    </Card.Text>
+                    <Card.Text>
+                        Price : {item.price}
+                    </Card.Text>
+                    <Card.Text>
+                        Qunatity : {item.quantity}
+                    </Card.Text>
+                    <Card.Text>
+                        Supplier-Name : {item.supplierName}
+                    </Card.Text>
+                    <Button variant="primary"  >Delivered</Button>
+                </Card.Body>
+            </Card>
 
-              <Link  to='/manageInventories'>ManageInventories</Link>
+
+            <Link to='/manageInventories'>ManageInventories</Link>
         </div>
     );
 };

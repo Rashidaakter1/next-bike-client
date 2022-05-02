@@ -2,7 +2,7 @@
     {   
         
         "name":"YAMAHA BIKE",
-         "_id":1,
+         "number":1,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -12,7 +12,7 @@
     },
     {
         "name":"YAMAHA BIKE", 
-        "_id":2,
+        "number":2,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -22,7 +22,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":3,
+         "number":3,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -32,7 +32,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":4,
+         "number":4,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -42,7 +42,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":5,
+         "number":5,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -52,7 +52,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":6,
+         "number":6,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -62,7 +62,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":7,
+         "number":7,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -72,7 +72,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":8,
+         "number":8,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -82,7 +82,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":9,
+         "number":9,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -92,7 +92,7 @@
     },
     {
         "name":"YAMAHA BIKE",
-         "_id":10,
+         "number":10,
         "img":" https://i.ibb.co/ZX2Cbkn/4.jpg",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
