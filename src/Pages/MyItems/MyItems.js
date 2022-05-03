@@ -7,7 +7,7 @@ const MyItems = () => {
     const [user, loading, error] = useAuthState(auth);
     const [items,setItems]=useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/inventory?email=$`)
+       
     },[])
 
 //    if(user.email === items.email){

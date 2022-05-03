@@ -1,15 +1,43 @@
 
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, ButtonToolbar, Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Inventory = () => {
     const { id } = useParams()
-
+   
     const [item, setItem] = useState({});
+
+    const handleQuantity = (id) => {
+
+        fetch(`http://localhost:5000/inventory/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(item),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+
+
+    }
+    const reStockQuantity=(id)=>{
+        console.log(item);
+        fetch(`http://localhost:5000/inventory/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(item),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+    }
+
     useEffect(() => {
-        
         fetch(`http://localhost:5000/inventory/${id}`)
             .then(res => res.json())
             .then(data => {
@@ -17,21 +45,37 @@ const Inventory = () => {
                 console.log(data);
             })
 
-        fetch(`http://localhost:5000/inventory/${id}`, {
-                method: 'PUT',
-                body: JSON.stringify(item),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
-                .then((response) => response.json())
-                .then((json) =>console.log(json));
-          
     }, [])
 
-   
 
-  
+    
+
+
+    // }
+    // const reStockQuantity =(event) => {
+    //     event.preventDefault()
+    //     const name=event.target.name.value
+    //     const quantity =event.target.quantity.value
+
+    //     console.log(name,quantity)
+    //     const url=`http://localhost:5000/inventory/${item._id}`
+    //     fetch(url, {
+    //         method: 'PUT',
+    //         body: JSON.stringify({name,quantity}),
+    //         headers: {
+    //             'Content-type': 'application/json; charset=UTF-8',
+    //         },
+    //     })
+    //         .then((response) => response.json())
+    //         .then((json) => console.log(json));
+      
+
+    // };
+
+
+
+
+
 
 
     return (
@@ -58,9 +102,23 @@ const Inventory = () => {
                     <Card.Text>
                         Supplier-Name : {item.supplierName}
                     </Card.Text>
-                    <Button variant="primary"  >Delivered</Button>
+                    <Button variant="primary" onClick={() => handleQuantity(item._id)} >Delivered</Button>
                 </Card.Body>
             </Card>
+            <h1>add new items</h1>
+            
+                <input placeholder='Name' type='text' name='name' className='mb-3 w-50 mx-auto '/>
+                <input placeholder='Quantity' type='number'name='quantity' className='mb-3 w-50 mx-auto ' />
+
+               
+                <Button onClick={()=>reStockQuantity(item._id)}
+                 className='mb-3 w-50 mx-auto' 
+               >Restock</Button>
+                
+                
+                
+                
+            
 
 
             <Link to='/manageInventories'>ManageInventories</Link>

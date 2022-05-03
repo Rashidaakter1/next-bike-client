@@ -4,9 +4,8 @@
    
     
     width: 100%;
-    border-bottom: 10px solid purple;
-    background-image:url(https://i.ibb.co/SXNXgxv/banner4-1.png) ;
-    background-repeat: no-repeat;
+    background-color: rgb(232, 253, 241);
+    
 }
 .form-heading{
     width: 50%;

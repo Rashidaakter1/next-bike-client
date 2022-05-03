@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Loading from '../../Shared/Loading/Loading';
+import Loading from '../../Shared/Loading/Loading'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -11,12 +13,18 @@ const Login = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
+    
+
     const [
         signInWithEmailAndPassword,
         emailuser,
         emailloading,
         emailerror,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+      );
 
 
     let errorManage;
@@ -45,16 +53,27 @@ const Login = () => {
         //signin with email-password
         signInWithEmailAndPassword(email, password)
 
-
-
-
-
     }
+
+    const handleResetPassword= async (event)=>{
+        const email = event.target.email.value;
+       if(email){
+        await sendPasswordResetEmail(email);
+        toast('Sent email');
+       }
+
+       else{
+        toast('Please enter your email')
+       }
+      
+    }
+
+
 
     return (
         <div className='container-full-form' >
             <div className='form-container ' >
-                Sign Into Your Account
+               
                 <div className='form-heading'>
                     <h1 className='text-center'>RIDEZ</h1>
                     <p className='text-center '>Sign Into Your Account</p>
@@ -79,7 +98,7 @@ const Login = () => {
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Remember me ?" />
                         </Form.Group>
-                        <Button className='w-100 form-btn mb-4 text-white  fs-5 fw-bold' variant='info' type="submit">
+                        <Button className='w-100 btn-warning mb-4 text-danger  fs-4 fw-bold' variant='info' type="submit">
                             LogIn
                         </Button>
                         <div className='text-center mt-4 mb-4 text-white fs-5 fw-bold'>
@@ -87,8 +106,13 @@ const Login = () => {
                             <p>Or LogIn With
                                 <button onClick={() => signInWithGoogle()} > Google</button>
                             </p>
+                            <p>Forget password ?
+                                <button onClick={handleResetPassword} className='btn btn-link text-danger'
+                                >Reset password</button>
+                            </p>
                         </div>
                         <p>{errorManage}</p>
+                        <ToastContainer></ToastContainer>
                     </Form>
                 </div>
             </div>
