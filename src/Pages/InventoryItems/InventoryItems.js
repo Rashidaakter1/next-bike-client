@@ -11,9 +11,9 @@ const InventoryItems = () => {
     }, [])
     return (
         <div>
-            <h1>Inventory Items</h1>
-            <div className="container">
-                <div className='row row-cols-1 row-cols-md-3 g-3'>
+            <h1 className='text-center'>Inventory Items</h1>
+            <div className='container'>
+                <div className='row gx-4  gy-4'>
                     {
                         items.map(item => <InventoryItem
                             key={item._id}

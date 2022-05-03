@@ -15,7 +15,7 @@ const InventoryItem = ({ item }) => {
 
     
     return (
-        <div className='col-sm-12 col-md-6 col-lg-4 gy-3 '>
+        <div className='col-lg-4 col-md-6'>
 
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={img} />

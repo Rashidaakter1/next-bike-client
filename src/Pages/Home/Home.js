@@ -5,9 +5,8 @@ import InventoryItems from '../InventoryItems/InventoryItems';
 const Home = () => {
     return (
         <div>
-             <Banner></Banner>
-            <h1>Home</h1>
-            <InventoryItems></InventoryItems>
+           <Banner></Banner>
+            <InventoryItems></InventoryItems>  
         </div>
     );
 };

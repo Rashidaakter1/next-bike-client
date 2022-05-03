@@ -11,6 +11,7 @@ const Header = () => {
     const [user, loading, error] = useAuthState(auth);
 
     return (
+        
         <nav>
             <div className='logo-img'>
             <img  src='https://i.ibb.co/R0GKjB4/logo-alt.png' alt="" />
