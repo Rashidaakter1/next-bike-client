@@ -2,6 +2,11 @@
 
 Here the live website link [Motor's Mania](https://nextbike-204d0.web.app).
 
+### Website Description
+This is an Inventory management website for Cars and Bikes .
+here you find your car or bike as per your personality.
+
+
 ## `website Features and Functionality `
 
 * ### Home page
@@ -20,7 +25,7 @@ Here the live website link [Motor's Mania](https://nextbike-204d0.web.app).
 ### `A list of technologies (frameworks, libraries) used in this project.`
 
 * react router
-* firebase 
+* firebase
 * bootstrap
 * react bootstrap
 * react firebase hooks
