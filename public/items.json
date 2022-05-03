@@ -3,7 +3,6 @@
         
        
         "name":"CRUISER",
-         "number":1,
         "img":"https://i.ibb.co/BKRfc75/brown-cruiser-Bike.png ",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -12,8 +11,7 @@
 
     },
     {
-        "name":"AUDI", 
-        "number":2,
+        "name":"AUDI",
         "img":"https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -23,7 +21,6 @@
     },
     {
         "name":"MERCEDES",
-         "number":3,
         "img":"https://images.unsplash.com/photo-1501066927591-314112b5888e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWVyY2VkZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
        
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
@@ -34,7 +31,6 @@
     },
     {
         "name":"BMW",
-         "number":4,
         "img":"https://images.unsplash.com/photo-1617531653332-bd46c24f2068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ym13fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -44,7 +40,6 @@
     },
     {
         "name":"LAMBORGHINI",
-         "number":5,
         "img":"https://images.unsplash.com/photo-1610880709844-b97111a986f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGxhbWJvcmdoaW5pfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -54,7 +49,6 @@
     },
     {
         "name":"SPORTS BIKE",
-         "number":6,
         "img":"https://images.unsplash.com/photo-1580310614729-ccd69652491d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW90b3JiaWtlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60 ",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -64,7 +58,6 @@
     },
     {
         "name":"AUDI",
-         "number":7,
         "img":"https://images.unsplash.com/photo-1618056210931-39f730ebbf67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YXVkaXxlbnwwfDB8MHx8&auto=format&fit=crop&w=400&q=60",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -74,7 +67,6 @@
     },
     {
         "name":"LAMBORGHINI",
-         "number":8,
         "img":"https://images.unsplash.com/photo-1595558848762-e5ab72171957?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNwb3J0cyUyMGNhcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=400&q=60",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -84,7 +76,6 @@
     },
     {
         "name":"SPORTS BIKE",
-         "number":9,
         "img":"https://images.unsplash.com/photo-1624809502669-b72a1c91ace7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3BvcnRiaWtlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",
@@ -94,7 +85,6 @@
     },
     {
         "name":"LAMBOEGINI",
-         "number":10,
         "img":"https://images.unsplash.com/photo-1570294646112-27ce4f174e38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFtYm9yZ2hpbml8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt.",
         "price":"10",

@@ -4,7 +4,7 @@ import './Loading.css'
 const Loading = () => {
     return (
         <div>
-            <div className="loading m-5 d-flex justify-content-center">
+            <div className="loading ">
                 <div className="spinner-border" role="status">
                    
                 </div>
