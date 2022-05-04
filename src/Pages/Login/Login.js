@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Loading from '../../Shared/Loading/Loading'; 
+import Loading from '../../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,7 +13,7 @@ const Login = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
-    
+
 
     const [
         signInWithEmailAndPassword,
@@ -24,7 +24,7 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
         auth
-      );
+    );
 
 
     let errorManage;
@@ -55,17 +55,17 @@ const Login = () => {
 
     }
 
-    const handleResetPassword= async (event)=>{
+    const handleResetPassword = async (event) => {
         const email = event.target.email.value;
-       if(email){
-        await sendPasswordResetEmail(email);
-        toast('Sent email');
-       }
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
 
-       else{
-        toast('Please enter your email')
-       }
-      
+        else {
+            toast('Please enter your email')
+        }
+
     }
 
 
@@ -73,9 +73,9 @@ const Login = () => {
     return (
         <div className='container-full-form' >
             <div className='form-container ' >
-               
+
                 <div className='form-heading'>
-                    <h1 className='text-center'>RIDEZ</h1>
+                    <h1 className='text-center'>MOTOR'S MANIA</h1>
                     <p className='text-center '>Sign Into Your Account</p>
                     <div className='text-center' >
                         <div className='d-flex justify-content-evenly'>
@@ -101,18 +101,34 @@ const Login = () => {
                         <Button className='w-100 btn-warning mb-4 text-danger  fs-4 fw-bold' variant='info' type="submit">
                             LogIn
                         </Button>
-                        <div className='text-center mt-4 mb-4 text-white fs-5 fw-bold'>
 
-                            <p>Or LogIn With
-                                <button onClick={() => signInWithGoogle()} > Google</button>
-                            </p>
+                        {/* //google signin */}
+
+                        <div className='d-flex align-items-center mt-3 mb-3'>
+                            <div style={{ 'height': '1px' }} className=' w-50 bg-secondary'></div>
+                            <p className='text-center text-secondary mt-2 px-2'>or</p>
+                            <div style={{ 'height': '1px' }} className=' w-50 bg-secondary'></div>
+                        </div>
+                        <button onClick={() => signInWithGoogle()} className='google-btn w-100 p-2 border border-none rounded-2' >
+                            <div className='d-flex justify-content-center'>
+
+                                <img style={{ height: '35px' }} src="https://i.ibb.co/ZTdGcNf/google-logo.webp" alt="" />
+
+                                <div><span className='ms-3 fs-5 fw-bold'>Continue With Google</span></div>
+                            </div>
+                        </button>
+
+                         {/* forget password */}
+
+                        <div style={{"color": ' rgb(92, 12, 79)'}} className='text-center mt-4 mb-4 fs-5 fw-bold'>
+                           
                             <p>Forget password ?
-                                <button onClick={handleResetPassword} className='btn btn-link text-danger'
+                                <button onClick={handleResetPassword} className='btn btn-link text-success'
                                 >Reset password</button>
                             </p>
                         </div>
                         <p>{errorManage}</p>
-                        <ToastContainer></ToastContainer>
+                       
                     </Form>
                 </div>
             </div>

@@ -4,9 +4,9 @@ import { Carousel } from 'react-bootstrap';
 
 const Testimonial = () => {
     return (
-        <div>
-            <h1>TESTIMONIALS</h1>
-            <div style={{ 'backgroundImage': "url(https://demo.themesuite.com/automotive-wp/wp-content/uploads/2014/09/dynamic-header-121.jpg ", "backgroundSize": "cover" }}>
+        <div style={{ "minHeight": "100vh" , 'background':"rgb(232, 253, 241"  }}>
+            <h1 className='header mb-0'>TESTIMONIALS</h1>
+            <div className='p-3 ' style={{ 'backgroundImage': "url(https://demo.themesuite.com/automotive-wp/wp-content/uploads/2014/09/dynamic-header-121.jpg ", "backgroundSize": "cover" }}>
                 <Carousel>
                     <Carousel.Item interval={2000}>
                         <img
@@ -14,7 +14,7 @@ const Testimonial = () => {
                             src="https://i.ibb.co/S3jyLvj/banner1.png"
                             alt="First slide"
                         />
-                        <blockquote className='text-center'>
+                    <blockquote className='detail'>
                         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
 
@@ -32,10 +32,15 @@ const Testimonial = () => {
                             src="https://i.ibb.co/RhXG1c1/banner2.png"
                             alt="Second slide"
                         />
-                        <p className='text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                       <blockquote className='detail'>
+                        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
 
-                        </p>
+                        
+                        </blockquote>
+                        <div style={{ "height": "5px" }} className='w-50 border border-info'>
+                        </div>
+                        <h1>NAME</h1>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
@@ -43,10 +48,15 @@ const Testimonial = () => {
                             src="https://i.ibb.co/C8nT4WN/banner3.png"
                             alt="Third slide"
                         />
-                        <p className='text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                        <blockquote className='detail'>
+                        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
 
-                        </p>
+                        
+                        </blockquote>
+                        <div style={{ "height": "5px" }} className='w-50 border border-info'>
+                        </div>
+                        <h1>NAME</h1>
                     </Carousel.Item>
 
                 </Carousel>

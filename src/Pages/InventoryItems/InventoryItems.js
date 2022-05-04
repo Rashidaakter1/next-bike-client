@@ -8,22 +8,25 @@ const InventoryItems = () => {
     useEffect(() => {
         fetch('http://localhost:5000/inventory')
             .then(res => res.json())
-            .then(data => setItems(data.slice(0,6)))
+            .then(data => setItems(data.slice(0, 6)))
     }, [])
     return (
-        <div style={{"background-color":" rgb(232, 253, 241"}}>
-            <h1 className='text-center pt-4 mb-5'>Grab Your Vehicle That Matches Your Personality</h1>
+        <div style={{ "background-color": " rgb(232, 253, 241" }}>
+            <h1 className='header '>Grab Your Vehicle That Matches Your Personality</h1>
             <div className='container'>
                 <div className='row gx-4  gy-4'>
                     {
-                        items? items.map(item => <InventoryItem
+                        items ? items.map(item => <InventoryItem
                             key={item._id}
                             item={item}
 
-                            ></InventoryItem>)
-                        :<Loading></Loading>
+                        ></InventoryItem>)
+                            : <Loading></Loading>
                     }
-                    <Link  to='/manageInventories'>ManageInventories</Link>
+                    <div className="text-center">
+                        <button className='w-25 p-2 mb-4 btn-warning text-danger  fs-4 fw-bold'><Link to='/manageInventories' className='text-danger text-decoration-none' >Manage Inventories</Link></button>
+                    </div>
+                    
                 </div>
             </div>
         </div>

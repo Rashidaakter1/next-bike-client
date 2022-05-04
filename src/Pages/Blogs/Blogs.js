@@ -2,10 +2,12 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='container mt-4 border rounded
+        <div>
+            <h1 className='header'>Blogs</h1>
+            <div   className='container mt-4 border rounded
         p-4'>
-            <img src="https://demo.themesuite.com/automotive-wp/wp-content/uploads/2014/09/dynamic-header-61.jpg" alt="" />
-            <h1 className='text-center mt-4 mb-4 text-success'>Blogs</h1>
+            
+            
             <h2 className='' >Difference between javascript and nodejs</h2>
             <p className='text-secondary'>
                 Authentication is the process of verifying who someone is, whereas Authorization is the process of verifying what specific applications, files, and data a user has access to.
@@ -46,6 +48,7 @@ const Blogs = () => {
                 </ul>
             </p>
             <h2>What is the purpose of jwt and how does it work</h2>
+        </div>
         </div>
     );
 };

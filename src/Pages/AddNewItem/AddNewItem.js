@@ -1,5 +1,5 @@
 import React from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 const AddNewItem = () => {
@@ -15,26 +15,30 @@ const AddNewItem = () => {
             },
         })
             .then((response) => response.json())
-            .then(result=>console.log(result));
+            .then(result => console.log(result));
 
-            navigate('/manageInventories')
+        navigate('/manageInventories')
 
-         
+
     };
 
     return (
-        <div style={{ "minHeight": "100vh" }}>
-            <h1>add new items</h1>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder='Name' type='text' className='mb-3 w-50 mx-auto ' {...register("name")} />
-                <input placeholder='Email' type='email' className='mb-3 w-50 mx-auto ' {...register("email")} />
-                <input placeholder='Price' type='number' className='mb-3 w-50 mx-auto ' {...register("price")} />
-                <input placeholder='Quantity' type='number' className='mb-3 w-50 mx-auto ' {...register("quantity")} />
-                <input placeholder='PhotoUrl' type='text' className='mb-3 w-50 mx-auto ' {...register("img")} />
+        <div style={{ "minHeight": "100vh" , 'background':"rgb(232, 253, 241"  }}>
+            <h1 className='header'>Add New Items</h1>
 
-                <input className='mb-3 w-50 mx-auto ' type="submit" value='Add stock' />
-            </form>
-          
+            <div style={{'background':"rgb(230, 178, 178)"}} className='container  rounded p-3 w-50 mt-3 mb-4'>
+                <h2 className='mt-4 mb-4 text-center'>Add Items</h2>
+                <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
+                    <input style={{"height":'40px'}} placeholder='Name' type='text' className='mb-3 w-100 mx-auto rounded p-2 ' {...register("name")} />
+                    <input style={{"height":'40px'}}  placeholder='Email' type='email' className='mb-3 w-100  mx-auto rounded p-2' {...register("email")} />
+                    <input style={{"height":'40px'}}  placeholder='Price' type='number' className='mb-3 w-100  mx-auto rounded p-2' {...register("price")} />
+                    <input style={{"height":'40px'}}  placeholder='Quantity' type='number' className='mb-3 w-100  mx-auto rounded p-2' {...register("quantity")} />
+                    <input style={{"height":'40px'}}  placeholder='PhotoUrl' type='text' className='mb-3 w-100  mx-auto rounded p-2 ' {...register("img")} />
+
+                    <input className='w-50 mt-3 p-2 mx-auto mb-4 btn-warning text-danger fs-4 fw-bold' type="submit" value='Add stock' />
+                </form>
+            </div>
+
         </div>
     );
 };
