@@ -1,0 +1,15 @@
+.detail{
+    border: none;
+    margin-top: 2%;
+    font-size: larger;
+    padding: 4%;
+    color: rgb(224, 232, 239);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.name {
+   margin-top: 5%;
+    text-align: center;
+    font-size: larger;
+    color: rgb(224, 232, 239);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

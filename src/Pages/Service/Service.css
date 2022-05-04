@@ -1,5 +1,11 @@
-.detail{
-    border: 1px solid beige;
+.service{
+    margin-top: 10%;
+    color: black;
     padding: 5%;
     text-align: justify;
+}
+.details{
+    padding: 3%;
+    color: rgb(7, 104, 107);
+ 
 }

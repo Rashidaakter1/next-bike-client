@@ -19,43 +19,47 @@ const Header = () => {
 
             <Navbar collapseOnSelect expand="lg" className='navbar' variant="dark">
                 <Container>
-                    <Navbar.Brand to='/home' as={Link}>
-                        <img src='https://i.ibb.co/Ssw3dY3/logo-alt-1-1.png' alt="" />
+                    <Navbar.Brand to='/home' 
+                    style={{
+                        'color':'rgb(228, 26, 26)',"height": "60px", "font-size": "xx-large" }}
+
+                      as={Link}>
+                        MOTOR'S MANIA
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="">
-                            
-                            <Form className="d-flex">
-                                <FormControl
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2"
-                                    aria-label="Search"
-                                />
-                                <Button variant="outline-success">Search</Button>
-                            </Form>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="">
 
-                        </Nav>
-                        <Nav>
-                            <Nav.Link to='/blogs' as={Link} >Blogs</Nav.Link>
-                           
-                            {
-                                user ? <>
-                                    <Link className='btn btn-link text-white text-decoration-none' to='/manageInventories'>Manage Items</Link>
-                                    <Link className='btn btn-link text-white text-decoration-none' to='/addNewItem'>Add Items</Link>
-                                    <Link className='btn btn-link text-white text-decoration-none' to='/myitems'>My Items</Link>
-                                    <button className='btn btn-link text-white text-decoration-none' onClick={() => signOut(auth)} >Signout</button>
-                                </> :
-                                    <Nav.Link to='/login' as={Link} >Login</Nav.Link>
-                            }
+                        <Form className="d-flex">
+                            <FormControl
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                            />
+                            <Button variant="outline-danger">Search</Button>
+                        </Form>
+
+                    </Nav>
+                    <Nav id='nav'>
+                        <Nav.Link to='/blogs' as={Link} >Blogs</Nav.Link>
+
+                        {
+                            user ? <>
+                                <Link className='btn btn-link text-white text-decoration-none' to='/manageInventories'>Manage Items</Link>
+                                <Link className='btn btn-link text-white text-decoration-none' to='/addNewItem'>Add Items</Link>
+                                <Link className='btn btn-link text-white text-decoration-none' to='/myitems'>My Items</Link>
+                                <button className='btn btn-link text-white text-decoration-none' onClick={() => signOut(auth)} >Signout</button>
+                            </> :
+                                <Nav.Link to='/login' as={Link} >Login</Nav.Link>
+                        }
 
 
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </nav>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+        </nav >
 
 
 

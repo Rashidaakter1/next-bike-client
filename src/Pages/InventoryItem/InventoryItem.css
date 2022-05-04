@@ -1,0 +1,18 @@
+.cards{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    color: saddlebrown;
+    background-color: bisque;
+    padding: 2%;
+}
+.card-btn button {
+    width: 100%;
+    color: rgb(122, 66, 45);
+    background-color: rgb(83, 200, 161);
+    border:none;
+    height: 30%; 
+}
+.card-btn button:hover{
+    background-color: rgb(8, 57, 41);
+}

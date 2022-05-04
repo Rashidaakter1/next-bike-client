@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
+import './InventoryItem.css'
 
 const InventoryItem = ({ item }) => {
     const {_id, name, price, img, description, supplierName, quantity } = item
@@ -20,20 +21,22 @@ const InventoryItem = ({ item }) => {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title className='cards'>{name}</Card.Title>
                     <Card.Text>
-                        description: {description}
+                        Description: {description}
                     </Card.Text>
                     <Card.Text>
-                        price:  {price}
+                        Price:  {price}
                     </Card.Text>
                     <Card.Text>
-                        supplierName:  {supplierName}
+                        SupplierName:  {supplierName}
                     </Card.Text>
                     <Card.Text>
-                        quantity:{quantity}
+                        Quantity:{quantity}
                     </Card.Text>
-                    <Button onClick={()=>handleInventoryId(item)}  variant="primary">Update</Button>
+                    <div className='card-btn' >
+                    <Button  onClick={()=>handleInventoryId(item)}  >Update</Button>
+                    </div>
                 </Card.Body>
             </Card>
 

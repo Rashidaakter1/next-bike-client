@@ -1,62 +1,76 @@
 
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import './Testimonial.css'
 
 const Testimonial = () => {
     return (
-        <div style={{ "minHeight": "100vh" , 'background':"rgb(232, 253, 241"  }}>
+        <div style={{'background': "rgb(232, 253, 241" }}>
             <h1 className='header mb-0'>TESTIMONIALS</h1>
             <div className='p-3 ' style={{ 'backgroundImage': "url(https://demo.themesuite.com/automotive-wp/wp-content/uploads/2014/09/dynamic-header-121.jpg ", "backgroundSize": "cover" }}>
                 <Carousel>
                     <Carousel.Item interval={2000}>
-                        <img
-                            className="rounded-circle w-25"
-                            src="https://i.ibb.co/S3jyLvj/banner1.png"
+                        <div className='text-center'><img
+                            className="rounded-circle w-15"
+                            src="https://i.ibb.co/5L8nZKc/review-3.png"
                             alt="First slide"
-                        />
-                    <blockquote className='detail'>
-                        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                        /></div>
+                        <blockquote className='detail'>
+                            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
+                            <div style={{ "height": "1px", "margin-top": "5%" }} className='w-50 border border-secondary  bg-secondary'>
+                            </div>
 
-                        
+                            <div>
+                                <h1 className="name">John Smith</h1>
+                            </div>
+
                         </blockquote>
-                        <div style={{ "height": "5px" }} className='w-50 border border-info'>
-                        </div>
-                        <h1>NAME</h1>
+
 
                     </Carousel.Item>
 
                     <Carousel.Item interval={2000}>
+                        <div  className='text-center'>
                         <img
-                            className="rounded-circle w-25"
-                            src="https://i.ibb.co/RhXG1c1/banner2.png"
+                            className="rounded-circle w-15"
+                            src="https://i.ibb.co/g9QVPjh/review-1.png"
                             alt="Second slide"
                         />
-                       <blockquote className='detail'>
-                        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
-
-                        
-                        </blockquote>
-                        <div style={{ "height": "5px" }} className='w-50 border border-info'>
                         </div>
-                        <h1>NAME</h1>
+                        <blockquote className='detail'>
+                            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
+                            <div style={{ "height": "1px", "margin-top": "5%" }} className='w-50 border border-secondary  bg-secondary'>
+                            </div>
+                            <div>
+                                <h1 className="name">Miss Lara</h1>
+                            </div>
+                        </blockquote>
+
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                            className="rounded-circle w-25"
-                            src="https://i.ibb.co/C8nT4WN/banner3.png"
+                        <div  className='text-center'><img
+                            className="rounded-circle w-15"
+                            src="https://i.ibb.co/yVKkNPL/review-2.png"
                             alt="Third slide"
-                        />
+                        /></div>
                         <blockquote className='detail'>
-                        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
+                            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
 
-                        
+                            <div style={{ "height": "1px", "margin-top": "5%" }} className='w-50 border border-secondary  bg-secondary'>
+                            </div>
+
+                            <div>
+                                <h1 className="name">Adam Smith</h1>
+                            </div>
                         </blockquote>
-                        <div style={{ "height": "5px" }} className='w-50 border border-info'>
-                        </div>
-                        <h1>NAME</h1>
+
+
+
+
+
                     </Carousel.Item>
 
                 </Carousel>
