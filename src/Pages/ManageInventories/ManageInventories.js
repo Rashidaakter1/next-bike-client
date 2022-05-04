@@ -12,7 +12,7 @@ const ManageInventories = () => {
 
     const [dataTable, setDataTable] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('http://localhost:5000/manage')
             .then(res => res.json())
             .then(data => setDataTable(data))
     }, [])
@@ -20,7 +20,7 @@ const ManageInventories = () => {
 
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `http://localhost:5000/manage/${id}`
         fetch(url, {
             method: 'DELETE',
         })

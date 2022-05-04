@@ -1,8 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddNewItem = () => {
+    const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate()
 
     const { register, handleSubmit } = useForm();
@@ -30,7 +33,7 @@ const AddNewItem = () => {
                 <h2 className='mt-4 mb-4 text-center'>Add Items</h2>
                 <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
                     <input style={{"height":'40px'}} placeholder='Name' type='text' className='mb-3 w-100 mx-auto rounded p-2 ' {...register("name")} />
-                    <input style={{"height":'40px'}}  placeholder='Email' type='email' className='mb-3 w-100  mx-auto rounded p-2' {...register("email")} />
+                    <input style={{"height":'40px'}}  placeholder='Email' type='email' value={user?.email} readOnly className='mb-3 w-100  mx-auto rounded p-2' {...register("email")} />
                     <input style={{"height":'40px'}}  placeholder='Price' type='number' className='mb-3 w-100  mx-auto rounded p-2' {...register("price")} />
                     <input style={{"height":'40px'}}  placeholder='Quantity' type='number' className='mb-3 w-100  mx-auto rounded p-2' {...register("quantity")} />
                     <input style={{"height":'40px'}}  placeholder='PhotoUrl' type='text' className='mb-3 w-100  mx-auto rounded p-2 ' {...register("img")} />

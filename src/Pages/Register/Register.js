@@ -5,8 +5,7 @@ import './Register.css'
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { f1a0 } from '@fortawesome/free-solid-svg-icons'
+
 
 
 const Register = () => {

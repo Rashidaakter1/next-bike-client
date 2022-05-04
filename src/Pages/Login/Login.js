@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    
+  
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
@@ -55,15 +57,17 @@ const Login = () => {
 
     }
 
-    const handleResetPassword = async (event) => {
+    const handleResetPassword = (event) => {
+       
         const email = event.target.email.value;
+        console.log(email);
         if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
+          sendPasswordResetEmail(email);
+            alert('Sent email');
         }
 
         else {
-            toast('Please enter your email')
+            alert('Please enter your email')
         }
 
     }
