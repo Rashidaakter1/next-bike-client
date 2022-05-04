@@ -12,13 +12,15 @@ import AddNewItem from './Pages/AddNewItem/AddNewItem';
 import MyItems from './Pages/MyItems/MyItems';
 import RequireAuth from './Shared/RequireAuth/RequireAuth';
 import NotFound from './Shared/NotFound/NotFound';
+import Blogs from './Pages/Blogs/Blogs';
+import Testimonial from './Pages/Testimonial/Testimonial';
 
 function App() {
   return (
     <div >
       <Header></Header>
-     
-   
+
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -28,11 +30,13 @@ function App() {
           <Inventory></Inventory>
         </RequireAuth>} />
         <Route path="/manageInventories" element={<ManageInventories></ManageInventories>} />
-        <Route path="/addNewItem" element={<AddNewItem></AddNewItem>}/>
+        <Route path="/addNewItem" element={<AddNewItem></AddNewItem>} />
 
 
-          <Route path="/myitems" element={<MyItems></MyItems>} />
-          <Route path="*" element={<NotFound></NotFound>} />
+        <Route path="/myitems" element={<MyItems></MyItems>} />
+        <Route path="/blogs" element={<Blogs></Blogs>} />
+        <Route path="/testimonial" element={<Testimonial></Testimonial>} />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
 
       <Footer></Footer>

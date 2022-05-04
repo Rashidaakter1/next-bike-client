@@ -11,10 +11,10 @@ const Header = () => {
     const [user, loading, error] = useAuthState(auth);
 
     return (
-        
+
         <nav>
             <div className='logo-img'>
-            <img  src='https://i.ibb.co/R0GKjB4/logo-alt.png' alt="" />
+                <img src='https://i.ibb.co/R0GKjB4/logo-alt.png' alt="" />
             </div>
 
             <Navbar collapseOnSelect expand="lg" className='navbar' variant="dark">
@@ -25,8 +25,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="">
-                            <Nav.Link to='/manage'  as={Link}>Manage</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            
                             <Form className="d-flex">
                                 <FormControl
                                     type="search"
@@ -39,16 +38,19 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
+                            <Nav.Link to='/blogs' as={Link} >Blogs</Nav.Link>
+                           
                             {
-                                user? <>
-                                <Link className='btn btn-link text-white text-decoration-none' to='/manageInventories'>Manage Items</Link>
-                                <Link className='btn btn-link text-white text-decoration-none' to='/addNewItem'>Add Items</Link>
-                                <Link className='btn btn-link text-white text-decoration-none' to='/myitems'>My Items</Link>
-                                <button className='btn btn-link text-white text-decoration-none' onClick={()=>signOut(auth)} >Signout</button>
-                                </>:
-                                <Nav.Link to='/login' as={Link} >Login</Nav.Link>
+                                user ? <>
+                                    <Link className='btn btn-link text-white text-decoration-none' to='/manageInventories'>Manage Items</Link>
+                                    <Link className='btn btn-link text-white text-decoration-none' to='/addNewItem'>Add Items</Link>
+                                    <Link className='btn btn-link text-white text-decoration-none' to='/myitems'>My Items</Link>
+                                    <button className='btn btn-link text-white text-decoration-none' onClick={() => signOut(auth)} >Signout</button>
+                                </> :
+                                    <Nav.Link to='/login' as={Link} >Login</Nav.Link>
                             }
-                            
+
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
