@@ -19,10 +19,12 @@ const Header = () => {
 
             <Navbar collapseOnSelect expand="lg" className='navbar' variant="dark">
                 <Container>
-                    <Navbar.Brand to='/home' as={Link}>Home</Navbar.Brand>
+                    <Navbar.Brand to='/home' as={Link}>
+                        <img src='https://i.ibb.co/Ssw3dY3/logo-alt-1-1.png' alt="" />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="">
                             <Nav.Link to='/manage'  as={Link}>Manage</Nav.Link>
                             <Nav.Link href="#pricing">Pricing</Nav.Link>
                             <Form className="d-flex">

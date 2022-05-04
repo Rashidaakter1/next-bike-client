@@ -11,8 +11,8 @@ const InventoryItems = () => {
             .then(data => setItems(data.slice(0,6)))
     }, [])
     return (
-        <div>
-            <h1 className='text-center mt-5 mb-5'>Inventory Items</h1>
+        <div style={{"background-color":" rgb(232, 253, 241"}}>
+            <h1 className='text-center pt-4 mb-5'>Grab Your Vehicle That Matches Your Personality</h1>
             <div className='container'>
                 <div className='row gx-4  gy-4'>
                     {

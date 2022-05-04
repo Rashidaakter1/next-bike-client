@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDzv8Nn8IUCydJStXR_PXT7t_GMbLcwy-E",
-  authDomain: "nextbike-204d0.firebaseapp.com",
-  projectId: "nextbike-204d0",
-  storageBucket: "nextbike-204d0.appspot.com",
-  messagingSenderId: "1015601035332",
-  appId: "1:1015601035332:web:bf30d646a13da8fa14e411"
+  apiKey:process.env.REACT_APP_apiKey, 
+  authDomain:process.env.REACT_APP_authDomain, 
+  projectId:process.env.REACT_APP_projectId, 
+  storageBucket:process.env.REACT_APP_storageBucket, 
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId, 
 };
 
 // Initialize Firebase
