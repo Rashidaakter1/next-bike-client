@@ -1,49 +1,32 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const MinibannerLast = () => {
   return (
-    <div className="d-flex justify-center">
-      <img
-        className="my-5"
-        src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner1.jpg"
-        alt=""
-      />
-
-      <img
-        className="my-5 "
-        src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner2.jpg"
-        alt=""
-      />
-
-      <img
-        className="my-5"
-        src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner3.jpg"
-        alt=""
-      />
-      {/* <Row>
-        <Col>
+    <div className="mt-5">
+      <Row>
+        <Col xl={4}>
           <img
-            className="m-2"
+            className="img-fluid"
+            src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner1.jpg"
+            alt=""
+          />
+        </Col>
+        <Col  xl={4}>
+          <img
+            className="img-fluid"
+            src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner2.jpg"
+            alt=""
+          />
+        </Col>
+        <Col  xl={4}>
+          <img
+            className="img-fluid"
             src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner3.jpg"
             alt=""
           />
         </Col>
-        <Col>
-          <img
-            className="m-2"
-            src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner3.jpg"
-            alt=""
-          />
-        </Col>
-        <Col>
-          <img
-            className="m-2"
-            src="https://demo.templatetrend.com/prestashop/PRS373/modules/tt_bannerslider/views/img/banner3.jpg"
-            alt=""
-          />
-        </Col>
-      </Row> */}
+      </Row>
     </div>
   );
 };

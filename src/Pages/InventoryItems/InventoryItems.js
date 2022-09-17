@@ -1,36 +1,89 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Loading from '../../Shared/Loading/Loading';
-import InventoryItem from '../InventoryItem/InventoryItem';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../../Shared/Loading/Loading";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+// import required modules
+import { FreeMode, Pagination } from "swiper";
+import { Button, Card } from "react-bootstrap";
 
 const InventoryItems = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch('https://pure-shore-71929.herokuapp.com/inventory')
-            .then(res => res.json())
-            .then(data => setItems(data.slice(0, 6)))
-    }, [])
-    return (
-        <div >
-            <h1>Grab Your Vehicle That Matches Your Personality</h1>
-            <div className='container'>
-                <div className='row gx-4  gy-4'>
-                    {
-                        items ? items.map(item => <InventoryItem
-                            key={item._id}
-                            item={item}
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    fetch("https://pure-shore-71929.herokuapp.com/inventory")
+      .then((res) => res.json())
+      .then((data) => setItems(data.slice(0, 6)));
+  }, []);
+  const navigate = useNavigate();
+  const handleInventoryId = (item) => {
+    navigate(`/inventory/${item._id}`);
+  };
 
-                        ></InventoryItem>)
-                            : <Loading></Loading>
-                    }
-                    <div className="text-center">
-                        <button className='w-25 p-2 mb-4 btn-warning text-danger  fs-4 fw-bold'><Link to='/manageInventories' className='text-danger text-decoration-none' >Manage Inventories</Link></button>
-                    </div>
-                    
-                </div>
-            </div>
+  return (
+    <div className="my-4">
+      <h1 className="mb-5">
+        <span className="fw-bold">Grab Your Vehicle</span> That Matches Your
+        Personality
+      </h1>
+      <div className="container">
+        <div className="row gx-4 gy-4">
+          <>
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[FreeMode, Pagination]}
+              className="mySwiper"
+            >
+              {items ? (
+                items.map((item) => (
+                  <SwiperSlide>
+                    <Card style={{ width: "18rem" }}>
+                      <img src={item.img} alt="" />
+                      <Card.Body>
+                        <Card.Title>{item.name}</Card.Title>
+                        <Card.Title>
+                          Price : $<span className="">{item.price}</span>
+                        </Card.Title>
+
+                        <div className="card-btn">
+                          <Button onClick={() => handleInventoryId(item)}>
+                            Check Now
+                          </Button>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </SwiperSlide>
+                ))
+              ) : (
+                <Loading></Loading>
+              )}
+            </Swiper>
+          </>
+
+          <div className="text-center">
+            <button className="w-25 p-2 mb-4 btn-warning text-danger  fs-4 fw-bold">
+              <Link
+                to="/manageInventories"
+                className="text-danger text-decoration-none"
+              >
+                Manage Inventories
+              </Link>
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default InventoryItems;

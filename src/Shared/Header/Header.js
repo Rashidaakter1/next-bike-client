@@ -14,7 +14,7 @@ const Header = () => {
 
         <nav>
             <div className='logo-img'>
-                <img src='https://i.ibb.co/R0GKjB4/logo-alt.png' alt="" />
+                <img className='img-fluid' src='https://i.ibb.co/R0GKjB4/logo-alt.png' alt="" />
             </div>
 
             <Navbar collapseOnSelect expand="lg" className='navbar' variant="dark">

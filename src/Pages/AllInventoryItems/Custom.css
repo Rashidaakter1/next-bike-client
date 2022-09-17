@@ -1,0 +1,10 @@
+
+figcaption {
+  position: absolute;
+  bottom: 10rem;
+  color: aliceblue;
+  margin: 0 15rem;
+}
+figcaption h2{
+    font-size: 5em;
+}
