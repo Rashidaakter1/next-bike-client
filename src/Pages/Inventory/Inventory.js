@@ -12,7 +12,7 @@ const Inventory = () => {
 
     const handleQuantity = (id) => {
 
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://pure-shore-71929.herokuapp.com/update/${id}`, {
             method: 'PUT',
             body: JSON.stringify(item),
             headers: {
@@ -31,7 +31,7 @@ const Inventory = () => {
 
     const reStockQuantity = (id) => {
         console.log(item);
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://pure-shore-71929.herokuapp.com/inventory/${id}`, {
             method: 'PUT',
             body: JSON.stringify(item),
             headers: {
@@ -43,7 +43,7 @@ const Inventory = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://pure-shore-71929.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => {
                 setItem(data)
@@ -63,7 +63,7 @@ const Inventory = () => {
     //     const quantity =event.target.quantity.value
 
     //     console.log(name,quantity)
-    //     const url=`http://localhost:5000/inventory/${item._id}`
+    //     const url=`https://pure-shore-71929.herokuapp.com/inventory/${item._id}`
     //     fetch(url, {
     //         method: 'PUT',
     //         body: JSON.stringify({name,quantity}),

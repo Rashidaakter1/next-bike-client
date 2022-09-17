@@ -10,7 +10,7 @@ const AddNewItem = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/inventory/', {
+        fetch('https://pure-shore-71929.herokuapp.com/inventory/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {

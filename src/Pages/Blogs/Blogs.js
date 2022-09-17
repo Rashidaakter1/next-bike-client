@@ -21,16 +21,7 @@ const Blogs = () => {
                         3.It mainly used for accessing or performing any non-blocking operation of any operating system, like creating or executing a shell script or accessing any hardware-specific information or running any backend job.
                     </p>
                     <hr />
-                    <h2> When should you use nodejs and when should you use mongodb</h2>
-                    <p className='text-danger'>
-                        I am using firebase for authentication.because it provides authentication services for almost every major platform, which includes Google, Facebook, Twitter, Apple, Github, Microsoft, and Yahoo.Also provides authentication using email, password, and phone number using OTP, and it is also free.
-
-                        <br />
-
-                        There are many options to implement authentication like  Multi-factor authentication,Certificate-based authentication,Biometric authentication,Token-based authentication
-
-                    </p>
-                    <hr />
+                    
                     <h2>Differences between sql and nosql databases.</h2>
                     <p className='text-secondary'>
                         1.SQL databases are primarily called as Relational Databases (RDBMS); whereas NoSQL database are primarily called as non-relational or distributed database.

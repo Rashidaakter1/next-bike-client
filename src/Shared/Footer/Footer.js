@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="sec aboutus">
                     <h2>About us</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum optio ratione quam alias dolorem voluptatem molestiae officia, ipsum ea odio nam consequatur itaque eos ex aspernatur, earum temporibus doloribus est.</p>
+                    <p>Grab your cars and bikes .</p>
 
                     <ul className='sci'>
                         <li><a href="">f</a></li>

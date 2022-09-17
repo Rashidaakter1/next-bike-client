@@ -6,13 +6,13 @@ import InventoryItem from '../InventoryItem/InventoryItem';
 const InventoryItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://pure-shore-71929.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => setItems(data.slice(0, 6)))
     }, [])
     return (
-        <div style={{ "background-color": " rgb(232, 253, 241" }}>
-            <h1 className='header '>Grab Your Vehicle That Matches Your Personality</h1>
+        <div >
+            <h1>Grab Your Vehicle That Matches Your Personality</h1>
             <div className='container'>
                 <div className='row gx-4  gy-4'>
                     {

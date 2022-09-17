@@ -12,7 +12,7 @@ const ManageInventories = () => {
 
     const [dataTable, setDataTable] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/manage')
+        fetch('https://pure-shore-71929.herokuapp.com/manage')
             .then(res => res.json())
             .then(data => setDataTable(data))
     }, [])
@@ -20,7 +20,7 @@ const ManageInventories = () => {
 
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/manage/${id}`
+        const url = `https://pure-shore-71929.herokuapp.com/manage/${id}`
         fetch(url, {
             method: 'DELETE',
         })
@@ -46,7 +46,7 @@ const ManageInventories = () => {
                 <Table striped bordered hover variant="">
                     <thead>
                         <tr>
-                            <th>No</th>
+                           
                             <th>Id</th>
                             <th>Name</th>
                             <th>Price</th>
@@ -57,7 +57,7 @@ const ManageInventories = () => {
                         dataTable.map(data =>
                             <tbody>
                                 <tr>
-                                    <td>{data.number}</td>
+                                    
                                     <td>{data._id}</td>
                                     <td>{data.name}</td>
                                     <td>{data.price}</td>

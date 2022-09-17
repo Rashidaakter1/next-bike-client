@@ -16,8 +16,7 @@ const Testimonial = () => {
                             alt="First slide"
                         /></div>
                         <blockquote className='detail'>
-                            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
+                            "I've been using this car since last year I'll divide my review between the pros and cons Pros:- Good power High-speed Good road presence, Smooth acceleration, Good braking, Can fit 6 people if they scooch a little. Cons:- A little bumpy at high speeds starts shaking above 300kmph, Very low mileage, High maintenance cost, Parts availability, Low ground clearance, Too noisy, No cover or seat cover with the car. AC is very slow, Spaceless Build quality and safety very poor. "
                             <div style={{ "height": "1px", "margin-top": "5%" }} className='w-50 border border-secondary  bg-secondary'>
                             </div>
 
@@ -39,8 +38,7 @@ const Testimonial = () => {
                         />
                         </div>
                         <blockquote className='detail'>
-                            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
+                            "Here are the technical characteristics of the Lamborghini Centenario: equipped with a 770 CV aspirated V12 engine springing from 0 to 100 km/h in 2.8 seconds, the newly-born Lamborghini car has been produced in a limited edition, for a total of 40 models: 20 Coupés and 20 Roadsters will be delivered to Lamborghini. This is the best car. My dream car"
                             <div style={{ "height": "1px", "margin-top": "5%" }} className='w-50 border border-secondary  bg-secondary'>
                             </div>
                             <div>
@@ -56,8 +54,7 @@ const Testimonial = () => {
                             alt="Third slide"
                         /></div>
                         <blockquote className='detail'>
-                            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ipsum quia odio dignissimos iste necessitatibus ducimus, explicabo saepe nesciunt delectus maxime suscipit modi labore enim? Accusantium libero corporis debitis?"
+                            "I drove this car which was owned by my friend. When he filled a full gallon, then he oned the high-performance mode and the car didn't drive long enough. The styling of the car and the comfort is top-notch which can not be compared by any brand."
 
                             <div style={{ "height": "1px", "margin-top": "5%" }} className='w-50 border border-secondary  bg-secondary'>
                             </div>
