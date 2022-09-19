@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
-
+import { AiFillCar } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -27,12 +27,17 @@ const InventoryItems = () => {
 
   return (
     <div className="my-4">
-      <h1 className="mb-5">
-        <span className="fw-bold">Grab Your Vehicle</span> That Matches Your
-        Personality
-      </h1>
+      <div className="d-flex ">
+        <div className="fs-1 me-2">
+          <AiFillCar />
+        </div>
+        <h1 className="mb-5 mt-2">
+          <span className="fw-bold fs-1">Grab Your Vehicle</span> That Matches Your
+          Personality
+        </h1>
+      </div>
       <div className="container">
-        <div className="row gx-4 gy-4">
+        <div className="">
           <>
             <Swiper
               slidesPerView={3}
@@ -92,8 +97,8 @@ const InventoryItems = () => {
             </Swiper>
           </>
 
-          <div className="text-center">
-            <button className="w-25 p-2 mb-4 btn-warning text-danger  fs-4 fw-bold">
+          <div className="text-center mt-3">
+            <button className="p-2 mb-4 btn-warning text-danger fs-4 fw-bold">
               <Link
                 to="/manageInventories"
                 className="text-danger text-decoration-none"
