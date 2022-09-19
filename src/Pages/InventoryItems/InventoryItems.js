@@ -51,6 +51,10 @@ const InventoryItems = () => {
                 clickable: true,
               }}
               breakpoints={{
+                240: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
                 390: {
                   slidesPerView: 1,
                   spaceBetween: 20,

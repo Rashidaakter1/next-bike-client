@@ -105,7 +105,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="form">
+        <div className="w-75 mx-auto border shadow-lg p-5" >
           <Form onSubmit={handleLogIn}>
             <Form.Group
               className="mb-3 fs-3 fw-bolder"

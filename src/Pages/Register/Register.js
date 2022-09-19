@@ -96,7 +96,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-        <div className="form">
+        <div className="w-75 mx-auto border shadow-lg p-5">
           <Form onSubmit={handleRegister}>
             <Form.Group
               className="mb-3 text-white fs-3 fw-bolder"
