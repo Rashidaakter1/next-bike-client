@@ -5,12 +5,12 @@ import TestimonialCard from "./TestimonialCard";
 
 const Testimonial = () => {
   return (
-    <div className="d-flex my-5">
-      <div style={{ width: "25%" }}>
+    <div className="row my-5">
+      <div className="p-3 col-lg-2 col-md-1 col-sm-1" style={{ width: "25%" }}>
         <TestimonialCard></TestimonialCard>
       </div>
       <div
-        className="p-3 "
+        className="p-3 col-lg-2 col-md-1 col-sm-1"
         style={{
           backgroundImage:
             "url(https://demo.themesuite.com/automotive-wp/wp-content/uploads/2014/09/dynamic-header-121.jpg ",
@@ -19,7 +19,7 @@ const Testimonial = () => {
           height: "50vh",
         }}
       >
-        <Carousel style={{ height: "50vh" }}>
+        <Carousel >
           <Carousel.Item interval={2000}>
             <div className="text-center">
               <img
@@ -29,7 +29,7 @@ const Testimonial = () => {
                 alt="First slide"
               />
             </div>
-            <blockquote className="detail">
+            <blockquote style={{"font-size":"1vw"}} className="detail">
               "I've been using this car since last year I'll divide my review
               between the pros and cons Pros:- Good power High-speed Good road
               presence, Smooth acceleration, Good braking, Can fit 6 people if
@@ -53,7 +53,7 @@ const Testimonial = () => {
                 alt="Second slide"
               />
             </div>
-            <blockquote className="detail">
+            <blockquote style={{"font-size":"1vw"}} className="detail">
               "Here are the technical characteristics of the Lamborghini
               Centenario: equipped with a 770 CV aspirated V12 engine springing
               from 0 to 100 km/h in 2.8 seconds, the newly-born Lamborghini car
@@ -78,7 +78,7 @@ const Testimonial = () => {
                 alt="Third slide"
               />
             </div>
-            <blockquote className="detail">
+            <blockquote style={{"font-size":"1vw"}} className="detail">
               "I drove this car which was owned by my friend. When he filled a
               full gallon, then he oned the high-performance mode and the car
               didn't drive long enough. The styling of the car and the comfort

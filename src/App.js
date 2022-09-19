@@ -15,6 +15,7 @@ import NotFound from "./Shared/NotFound/NotFound";
 import Blogs from "./Pages/Blogs/Blogs";
 import Testimonial from "./Pages/Testimonial/Testimonial";
 import { Container } from "react-bootstrap";
+import AllInventoryItems from "./Pages/AllInventoryItems/AllInventoryItems";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
       <Header></Header>
 
       <main>
-        <Container className='container-fluid'>
+        <div className="container-fluid">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -50,11 +51,15 @@ function App() {
             />
 
             <Route path="/myitems" element={<MyItems></MyItems>} />
+            <Route
+              path="/allinventory"
+              element={<AllInventoryItems></AllInventoryItems>}
+            />
             <Route path="/blogs" element={<Blogs></Blogs>} />
             <Route path="/testimonial" element={<Testimonial></Testimonial>} />
             <Route path="*" element={<NotFound></NotFound>} />
           </Routes>
-        </Container>
+        </div>
       </main>
 
       <Footer></Footer>

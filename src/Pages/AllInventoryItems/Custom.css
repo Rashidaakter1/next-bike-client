@@ -1,10 +1,10 @@
 
 figcaption {
   position: absolute;
-  bottom: 10rem;
+  bottom: 5rem;
   color: aliceblue;
-  margin: 0 15rem;
+  margin: 0 4rem;
 }
-figcaption h2{
+/* figcaption h2{
     font-size: 5em;
-}
+} */
