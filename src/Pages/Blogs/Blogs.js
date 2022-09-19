@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-import { FaBloggerB } from "react-icons/fa";
+import { FaBloggerB, FaHandsHelping } from "react-icons/fa";
 
 const items = [
   {
@@ -63,12 +63,17 @@ const items = [
 const Blogs = () => {
   return (
     <div className="my-6">
-      <div className="d-flex align-items-center mb-3">
-        <div className="me-2 fs-1">
-          <FaBloggerB />
+      <div>
+        <div className="d-flex">
+          <div style={{ fontSize: "3vw" }} className=" me-2">
+            <FaBloggerB />
+          </div>
+          <h1 style={{ fontSize: "4vw" }} className="mb-5 ">
+            <span className="fw-bold">Latest </span> Blogs
+          </h1>
         </div>
-        <h1 className="fw-bold fs-1 mt-3">Latest Blog</h1>
       </div>
+
       <>
         <Swiper
           slidesPerView={4}
@@ -80,6 +85,14 @@ const Blogs = () => {
             clickable: true,
           }}
           breakpoints={{
+            390: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
             576: {
               slidesPerView: 1,
               spaceBetween: 20,

@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
 import { AiFillCar } from "react-icons/ai";
+import { BsArrowRightCircle } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import { Button, Card } from "react-bootstrap";
 
 const InventoryItems = () => {
@@ -26,49 +28,52 @@ const InventoryItems = () => {
   };
 
   return (
-    <div className="my-4">
-      <div className="d-flex ">
-        <div className="fs-1 me-2">
+    <div className="my-7">
+      <div className="d-flex">
+        <div style={{ fontSize: "3vw" }} className=" me-2">
           <AiFillCar />
         </div>
-        <h1 className="mb-5 mt-2">
-          <span className="fw-bold fs-1">Grab Your Vehicle</span> That Matches Your
+        <h1 style={{ fontSize: "4vw" }} className="mb-5 ">
+          <span className="fw-bold">Grab Your Vehicle</span> That Matches Your
           Personality
         </h1>
       </div>
-      <div className="container">
+      <div className="">
         <div className="">
           <>
             <Swiper
               slidesPerView={3}
               spaceBetween={30}
-              freeMode={true}
+              slidesPerGroup={3}
+              loop={true}
+              loopFillGroupWithBlank={true}
               pagination={{
                 clickable: true,
               }}
               breakpoints={{
-                576: {
-                  slidesPerView: 1,
-                  // spaceBetween: 20,
-                },
-                640: {
+                390: {
                   slidesPerView: 1,
                   spaceBetween: 20,
                 },
-                768: {
+                480: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                640: {
                   slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
                   spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-                1200: {
                   slidesPerView: 4,
                   spaceBetween: 50,
                 },
               }}
-              modules={[FreeMode, Pagination]}
+              navigation={true}
+              modules={[Pagination, Navigation]}
               className="mySwiper"
             >
               {items ? (
@@ -97,14 +102,19 @@ const InventoryItems = () => {
             </Swiper>
           </>
 
-          <div className="text-center mt-3">
-            <button className="p-2 mb-4 btn-warning text-danger fs-4 fw-bold">
-              <Link
-                to="/manageInventories"
-                className="text-danger text-decoration-none"
-              >
-                Manage Inventories
-              </Link>
+          <div className="mt-3 text-center ">
+            <button className="py-1 px-4 mb-4 btn btn-outline-dark fs-4 fw-bold">
+              <div className="d-flex">
+                <Link
+                  to="/manageInventories"
+                  className="text-danger text-decoration-none"
+                >
+                  Manage Inventories
+                </Link>
+                <div className=" ms-2">
+                  <BsArrowRightCircle />
+                </div>
+              </div>
             </button>
           </div>
         </div>

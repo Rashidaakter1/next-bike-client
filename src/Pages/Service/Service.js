@@ -1,23 +1,34 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { FaHandsHelping } from "react-icons/fa";
 import "./Service.css";
 
 const Service = () => {
   return (
     <div className=" my-5">
       <div>
-        <div className="text-center ">
-          <h2 className="fs-1 text-success p-2">WHAT CAN WE DO FOR YOU?</h2>
-          <img
-            className="img-fluid"
-            src="https://demo.themesuite.com/automotive-wp/wp-content/uploads/2014/09/parallax21-scaled.jpg"
-            alt=""
-          />
+        <div>
+          <div className="d-flex">
+            <div style={{ fontSize: "3vw" }} className=" me-2">
+              <FaHandsHelping />
+            </div>
+            <h1 style={{ fontSize: "4vw" }} className="mb-5 ">
+              <span className="fw-bold">WHAT</span> CAN WE DO FOR YOU?
+            </h1>
+          </div>
         </div>
       </div>
       <div className="">
         <div className="mt-5 ">
           <Row>
+            <Col xl={4} className="my-2">
+              <img
+                className="img-fluid"
+                src="https://i.ibb.co/dbyccg7/rsz-3parallax21-scaled.jpg"
+                alt=""
+              />
+              
+            </Col>
             <Col xl={4} className="my-2">
               <h1>Great service is just a tap away</h1>
               <p className="p-2">

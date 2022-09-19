@@ -8,7 +8,7 @@ const Testimonial = () => {
   return (
     <div className="container my-5">
       <div className="row">
-        <div className="col-lg-4 col-md-12 col-sm-12">
+        <div className="col-lg-4 col-md-12 col-sm-12 text-end">
           {" "}
           <TestimonialCard></TestimonialCard>
         </div>

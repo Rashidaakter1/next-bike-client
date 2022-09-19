@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const MinibannerLast = () => {
   return (
-    <div className="mt-5 container">
+    <div className="my-5 container">
       <Row>
         <Col xl={4} className='my-2'>
           <img
