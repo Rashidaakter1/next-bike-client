@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GrLogin } from "react-icons/gr";
 
+
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -75,14 +76,16 @@ const Login = () => {
             <h1 style={{ fontSize: "4vw" }} className="mb-3 ">
               <span className="fw-bold">Sign In </span> to your account.
             </h1>
-            <div style={{ fontSize: "3vw" }} className=" me-2">
+            <div style={{ fontSize: "3vw" }} className=" me-2 mb-2">
               <GrLogin />
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center my-3">
             <div className="d-flex justify-content-center">
               <button
-               size="lg" className="btn btn-outline-dark px-3  ">
+                size="lg"
+                className="d-flex align-items-center btn btn-outline-dark px-5  "
+              >
                 <Link
                   className="text-danger fs-4 fw-bold text-decoration-none"
                   to="/login"
@@ -90,10 +93,10 @@ const Login = () => {
                   Login
                 </Link>
               </button>
-             
+
               <button size="lg" className="btn btn-outline-dark">
                 <Link
-                  className="text-danger  fs-4 fw-bold text-decoration-none"
+                  className="text-danger px-5 fs-4 fw-bold text-decoration-none"
                   to="/register"
                 >
                   Register

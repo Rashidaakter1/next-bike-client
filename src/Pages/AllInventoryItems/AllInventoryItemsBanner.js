@@ -19,9 +19,9 @@ const AllInventoryItemsBanner = () => {
             Top quality, great selection and expert advice you can trust
           </h4>
 
-          <div className="mt-3 ">
+          <div className="mt-3 text-center ">
             <button className="px-5 py-1 mb-4 btn btn-outline-light fs-4 fw-bold">
-              <div className="d-flex">
+              <div style={{ fontSize: "2vw" }} className="d-flex">
                 <Link
                   to="/allinventory"
                   className="text-danger text-decoration-none"

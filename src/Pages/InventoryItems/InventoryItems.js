@@ -28,7 +28,7 @@ const InventoryItems = () => {
   };
 
   return (
-    <div className="my-7">
+    <div className="my-5">
       <div className="d-flex">
         <div style={{ fontSize: "3vw" }} className=" me-2">
           <AiFillCar />
@@ -87,10 +87,13 @@ const InventoryItems = () => {
                           Price : $<span className="">{item.price}</span>
                         </Card.Title>
 
-                        <div className="card-btn">
-                          <Button onClick={() => handleInventoryId(item)}>
+                        <div  className="">
+                          <button
+                            className="btn btn-outline-dark "
+                            onClick={() => handleInventoryId(item)}
+                          >
                             Check Now
-                          </Button>
+                          </button>
                         </div>
                       </Card.Body>
                     </Card>
@@ -103,8 +106,8 @@ const InventoryItems = () => {
           </>
 
           <div className="mt-3 text-center ">
-            <button className="py-1 px-4 mb-4 btn btn-outline-dark fs-4 fw-bold">
-              <div className="d-flex">
+            <button className="px-4 mb-4 btn btn-outline-dark fs-4 fw-bold">
+              <div style={{ fontSize: "2vw" }} className="d-flex">
                 <Link
                   to="/manageInventories"
                   className="text-danger text-decoration-none"
