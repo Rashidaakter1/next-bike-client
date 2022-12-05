@@ -11,7 +11,7 @@ const AddNewItem = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch("https://pure-shore-71929.herokuapp.com/inventory/", {
+    fetch("https://nextbike-api.onrender.com/inventory/", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

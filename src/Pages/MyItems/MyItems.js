@@ -12,7 +12,7 @@ const MyItems = () => {
   const email = user?.email;
   console.log();
   useEffect(() => {
-    const url = `https://pure-shore-71929.herokuapp.com/inventory?email=${email}`;
+    const url = `https://nextbike-api.onrender.com/inventory?email=${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => console.log(data));

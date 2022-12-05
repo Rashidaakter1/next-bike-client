@@ -11,13 +11,13 @@ import "./ManageInventories.css";
 const ManageInventories = () => {
   const [dataTable, setDataTable] = useState([]);
   useEffect(() => {
-    fetch("https://pure-shore-71929.herokuapp.com/manage")
+    fetch("https://nextbike-api.onrender.com/manage")
       .then((res) => res.json())
       .then((data) => setDataTable(data));
   }, []);
 
   const handleDelete = (id) => {
-    const url = `https://pure-shore-71929.herokuapp.com/manage/${id}`;
+    const url = `https://nextbike-api.onrender.com/manage/${id}`;
     fetch(url, {
       method: "DELETE",
     })

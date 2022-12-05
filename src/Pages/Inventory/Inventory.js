@@ -12,7 +12,7 @@ const Inventory = () => {
   const [item, setItem] = useState({});
 
   const handleQuantity = (id) => {
-    fetch(`https://pure-shore-71929.herokuapp.com/update/${id}`, {
+    fetch(`https://nextbike-api.onrender.com/update/${id}`, {
       method: "PUT",
       body: JSON.stringify(item),
       headers: {
@@ -27,7 +27,7 @@ const Inventory = () => {
 
   const reStockQuantity = (id) => {
     console.log(item);
-    fetch(`https://pure-shore-71929.herokuapp.com/inventory/${id}`, {
+    fetch(`https://nextbike-api.onrender.com/inventory/${id}`, {
       method: "PUT",
       body: JSON.stringify(item),
       headers: {
@@ -39,7 +39,7 @@ const Inventory = () => {
   };
 
   useEffect(() => {
-    fetch(`https://pure-shore-71929.herokuapp.com/inventory/${id}`)
+    fetch(`https://nextbike-api.onrender.com/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -54,7 +54,7 @@ const Inventory = () => {
   //     const quantity =event.target.quantity.value
 
   //     console.log(name,quantity)
-  //     const url=`https://pure-shore-71929.herokuapp.com/inventory/${item._id}`
+  //     const url=`https://nextbike-api.onrender.com/inventory/${item._id}`
   //     fetch(url, {
   //         method: 'PUT',
   //         body: JSON.stringify({name,quantity}),
